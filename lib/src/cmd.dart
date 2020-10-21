@@ -54,3 +54,7 @@ dynamic cmdExec(dynamic obj, String cmdText) {
     return setn(obj, cmd.keys, cmd.value, true, 0);
   }
 }
+
+void cmdFlag(String newFlag) {
+  flag = newFlag;
+}

@@ -1,4 +1,4 @@
-const String flag = '_';
+String flag;
 bool _def(dynamic value) => value == null;
 
 dynamic _get1(dynamic obj, String key) {
@@ -15,9 +15,13 @@ Map<String, dynamic> _merge1(
   return des;
 }
 
-int _id = 0;
+int __id = 0;
 Map<String, dynamic> _new1() {
-  return <String, dynamic>{flag: _id++};
+  if (flag != null) {
+    return <String, dynamic>{flag: __id++};
+  } else {
+    return <String, dynamic>{};
+  }
 }
 
 Map<String, dynamic> _new2(String key, dynamic value) {
